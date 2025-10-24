@@ -6,11 +6,11 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Responsi1Mobile1D023104">
+        android:theme="@style/Theme.Responsi1Mobile1D023104"
+        android:enableOnBackInvokedCallback="true">
 
         <activity
             android:name=".MainActivity"
@@ -44,6 +44,6 @@
             android:exported="false"
             android:label="Player Detail"
             android:parentActivityName=".ui.SquadActivity" />
-
     </application>
+
 </manifest>
