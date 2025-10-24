@@ -1,9 +1,12 @@
 # Responsi-Pemrograman-Mobile
 
-Simon Dimas Pramudya
-H1D023104
-Shift D
-Shift Asal G
+Nama        : Simon Dimas Pramudya
+
+NIM         : H1D023104
+
+Shift Awal  : G
+
+Shift Akhir : D
 
 ---
 
