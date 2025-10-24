@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHistory"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Club History"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_arrow_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/ivStadium"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/stadium_bg" />
+
+            <TextView
+                android:id="@+id/tvClubName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Girona FC"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvVenue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Venue: Estadi Municipal de Montilivi"
+                android:textAlignment="center"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvFounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Founded: 1930"
+                android:textAlignment="center"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#333"
+                android:text="Deskripsi sejarah klub..." />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

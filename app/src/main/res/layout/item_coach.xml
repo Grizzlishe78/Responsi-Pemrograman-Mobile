@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardCoach"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCoachTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coach"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvCoachName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/tvCoachNationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nationality: -" />
+
+        <TextView
+            android:id="@+id/tvCoachDob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DOB: -" />
+
+        <TextView
+            android:id="@+id/tvCoachContract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contract: -" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

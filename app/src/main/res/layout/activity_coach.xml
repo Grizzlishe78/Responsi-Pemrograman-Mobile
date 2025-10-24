@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF5F5"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/ivCoach"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_coach" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCoach"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Head Coach"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_arrow_back" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvCoachName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Łukasz Kwasniok"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvCoachDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1981-06-12" />
+
+            <TextView
+                android:id="@+id/tvCoachNationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Germany" />
+
+            <TextView
+                android:id="@+id/tvCoachContract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contract: -" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
