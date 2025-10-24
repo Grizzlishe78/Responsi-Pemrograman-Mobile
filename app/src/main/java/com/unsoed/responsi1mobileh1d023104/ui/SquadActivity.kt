@@ -1,12 +1,11 @@
 package com.unsoed.responsi1mobile1d023104.ui
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import com.unsoed.responsi1mobile1d023104.databinding.ActivitySquadBinding
-import com.unsoed.responsi1mobile1d023104.model.SquadMember
 import com.unsoed.responsi1mobile1d023104.model.TeamResponse
 
 class SquadActivity : AppCompatActivity() {
@@ -26,8 +25,10 @@ class SquadActivity : AppCompatActivity() {
         val json = intent.getStringExtra("team_json")
         val team = Gson().fromJson(json, TeamResponse::class.java)
         val squad = team.squad ?: emptyList()
+        Log.d("SquadActivity", "Loaded squad size: ${squad.size}")
 
         val adapter = PlayerAdapter(squad) { player ->
+            Log.d("SquadActivity", "Clicked player: ${player.name}")
             val playerJson = Gson().toJson(player)
             val bottomSheet = PlayerDetailBottomSheet.newInstance(playerJson)
             bottomSheet.show(supportFragmentManager, "PlayerDetailBottomSheet")

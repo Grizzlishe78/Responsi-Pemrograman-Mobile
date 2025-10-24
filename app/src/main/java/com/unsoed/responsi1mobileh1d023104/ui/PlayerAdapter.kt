@@ -1,5 +1,6 @@
 package com.unsoed.responsi1mobile1d023104.ui
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -26,11 +27,16 @@ class PlayerAdapter(
                 "forw" in pos -> android.R.color.holo_red_light
                 else -> android.R.color.darker_gray
             }
-            binding.cardPlayer.setCardBackgroundColor(
-                binding.root.context.resources.getColor(bg, null)
-            )
 
-            binding.root.setOnClickListener { onClick(p) }
+            val context = binding.root.context
+            val color = context.resources.getColor(bg, context.theme)
+            binding.cardPlayer.setCardBackgroundColor(color)
+
+            binding.root.setOnClickListener {
+                Log.d("PlayerAdapter", "Clicked: ${p.name}")
+                onClick(p)
+            }
+
         }
     }
 
@@ -42,4 +48,3 @@ class PlayerAdapter(
     override fun onBindViewHolder(holder: VH, position: Int) = holder.bind(items[position])
     override fun getItemCount(): Int = items.size
 }
-
